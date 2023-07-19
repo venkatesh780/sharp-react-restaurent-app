@@ -1,10 +1,12 @@
 import Cart from "./components/Cart/Cart";
 import Header from "./components/Layout/Header";
 import Meals from "./components/Meals/Meals";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import cartContext from "./store/cartContext";
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const cart = useContext(cartContext);
 
   const cartOpenHandler = () => {
     setIsCartOpen(true);
@@ -14,11 +16,13 @@ function App() {
   };
   return (
     <>
-      <Header onCartOpen={cartOpenHandler} />
-      <main>
-        <Meals />
+      <cartContext.Provider value={cart}>
         {isCartOpen && <Cart onCartClose={cartCloseHandler} />}
-      </main>
+        <Header onCartOpen={cartOpenHandler} />
+        <main>
+          <Meals />
+        </main>
+      </cartContext.Provider>
     </>
   );
 }

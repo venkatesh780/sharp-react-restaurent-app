@@ -17,3 +17,6 @@
   border-radius: 20px;
   margin-top: 10px;
 }
+.meal_form_button:hover {
+  cursor: pointer;
+}
