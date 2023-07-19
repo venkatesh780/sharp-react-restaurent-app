@@ -1,0 +1,12 @@
+.meal {
+  margin: 2px;
+  padding: 2px;
+  margin-bottom: 5px;
+}
+
+.meal h2 {
+  font-weight: bold;
+}
+.meal h3 {
+  color: brown;
+}
