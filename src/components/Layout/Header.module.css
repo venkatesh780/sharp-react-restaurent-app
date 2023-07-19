@@ -13,28 +13,17 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
   z-index: 10;
 }
-.cart_container {
-  display: flex;
-  background-color: rgb(90, 23, 23);
-  width: 20%;
-  justify-content: center;
-  align-items: center;
-  height: 70%;
-  border-radius: 40px;
+
+.main-image {
+  width: 100%;
+  height: 25rem;
+  z-index: 0;
+  overflow: hidden;
 }
-.cart_count_button {
-  background-color: brown;
-  margin-left: 20px;
-  width: 20%;
-  height: 70%;
-  text-align: center;
-  border-radius: 30%;
-  padding: 2% 0;
-  font-weight: bold;
-  font-size: 20px;
-  color: white;
-  border: none;
-}
-.cart_count_button:hover {
-  cursor: pointer;
+
+.main-image img {
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
 }

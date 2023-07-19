@@ -1,14 +1,18 @@
 import classes from "./Header.module.css";
+import mealsImage from "../../asserts/meals_2.jpg";
+import HeaderCartButton from "./HeaderCartButton";
 
 const Header = () => {
   return (
-    <div className={classes.header}>
-      <h1>React Meals</h1>
-      <div className={classes.cart_container}>
-        <h2>Your Cart</h2>
-        <button className={classes.cart_count_button}>0</button>
+    <>
+      <header className={classes.header}>
+        <h1>React Meals</h1>
+        <HeaderCartButton />
+      </header>
+      <div className={classes["main-image"]}>
+        <img src={mealsImage} alt="melas" />
       </div>
-    </div>
+    </>
   );
 };
 
