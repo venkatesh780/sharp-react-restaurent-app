@@ -33,7 +33,7 @@ const AvailableMeals = () => {
     <section className={classes.meals_contianer}>
       <ul>
         {DUMMY_MEALS.map((meal) => {
-          return <MealItem meal={meal} />;
+          return <MealItem key={meal.id} meal={meal} />;
         })}
       </ul>
     </section>
