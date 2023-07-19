@@ -1,14 +1,23 @@
 import Cart from "./components/Cart/Cart";
 import Header from "./components/Layout/Header";
 import Meals from "./components/Meals/Meals";
+import { useState } from "react";
 
 function App() {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const cartOpenHandler = () => {
+    setIsCartOpen(true);
+  };
+  const cartCloseHandler = () => {
+    setIsCartOpen(false);
+  };
   return (
     <>
-      <Header />
+      <Header onCartOpen={cartOpenHandler} />
       <main>
         <Meals />
-        <Cart />
+        {isCartOpen && <Cart onCartClose={cartCloseHandler} />}
       </main>
     </>
   );
