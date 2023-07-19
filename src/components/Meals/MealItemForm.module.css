@@ -1,0 +1,19 @@
+.meal_form {
+  display: flex;
+}
+
+.meal_form input {
+  width: 40px;
+  margin: 0px 10px;
+}
+.meal_form_button {
+  background-color: brown;
+  width: 100px;
+  height: 36px;
+  padding: 5px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  margin-top: 10px;
+}

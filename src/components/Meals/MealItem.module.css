@@ -2,6 +2,8 @@
   margin: 2px;
   padding: 2px;
   margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .meal h2 {
