@@ -2,8 +2,7 @@ import classes from "./Cart.module.css";
 import Model from "../UI/Model";
 import cartContext from "../../store/cartContext";
 import { useContext } from "react";
-
-const cartItems = [{ id: "c1", name: "Venky", amount: "3", price: "160" }];
+import CartItem from "./CartItem";
 
 const Cart = (props) => {
   const closeCartHandler = () => {
@@ -15,14 +14,15 @@ const Cart = (props) => {
     return cur + parseInt(next.price);
   }, 0);
   cart.totalAmount = totalAmount;
-  console.log(cart);
+
   return (
     <Model onCloseCart={props.onCartClose}>
       <ul className={classes["cart-items"]}>
         {cart.items.map((item) => (
-          <li key={item.id}>
-            {item.name}-{item.amount}
-          </li>
+          // <li key={item.id}>
+          //   {item.name}-{item.amount}
+          // </li>
+          <CartItem key={item.id} item={item} />
         ))}
       </ul>
       <div className={classes.total}>

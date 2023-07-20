@@ -1,7 +1,6 @@
 import classes from "./AvailableMeals.module.css";
 import MealItem from "./MealItem";
-import { useContext } from "react";
-import cartContext from "../../store/cartContext";
+
 const DUMMY_MEALS = [
   {
     id: "m1",
@@ -30,7 +29,6 @@ const DUMMY_MEALS = [
 ];
 
 const AvailableMeals = () => {
-  const { items } = useContext(cartContext);
   return (
     <section className={classes.meals_contianer}>
       <ul>

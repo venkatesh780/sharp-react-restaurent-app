@@ -1,0 +1,37 @@
+.cart_item_container {
+  display: flex;
+  justify-content: space-between;
+}
+.cart_item {
+  display: flex;
+  justify-content: space-between;
+}
+.amount {
+  background-color: grey;
+  height: 30px;
+  width: 30px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 10px;
+  margin-top: 25px;
+}
+
+.reduceCountBtn {
+  background-color: white;
+  width: 45px;
+  height: 20px;
+  margin-right: 5px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+.increaseCountBtn {
+  background-color: brown;
+  width: 45px;
+  height: 20px;
+  margin-right: 5px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+}
